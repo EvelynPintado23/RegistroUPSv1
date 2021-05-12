@@ -1,6 +1,7 @@
 package vista;
 
 import javax.faces.bean.ManagedBean;
+import javax.faces.bean.SessionScoped;
 import javax.faces.context.FacesContext;
 import javax.inject.Inject;
 import javax.servlet.http.HttpSession;
@@ -9,6 +10,7 @@ import modelo.Usuario;
 import negocio.GestionUsuarioLocal;
 
 @ManagedBean
+@SessionScoped
 public class GestionUsuarioBean {
 	
 	@Inject
@@ -80,10 +82,12 @@ public class GestionUsuarioBean {
 	
 		
 	public String login() {
+		
+		System.out.println("LLega al loggin");
 		try {
 			
 			usuario = gul.loggin(usuario_correo, usuario_contrasena);
-			System.out.println(usuario_acceso);
+			System.out.println(usuario.getUsuario_apellidos());
 			
 			if (usuario != null) {
 				
@@ -91,11 +95,12 @@ public class GestionUsuarioBean {
 		        HttpSession session = (HttpSession) context.getExternalContext().getSession(true);
 				session.setAttribute("user", usuario);
 				System.out.println("ha iniciado sesion");
+				
 				return "index";
 			}else {
-//				FacesContext context = FacesContext.getCurrentInstance();
-//		        HttpSession session = (HttpSession) context.getExternalContext().getSession(true);
-//		        session.setAttribute("user", usuario);
+				FacesContext context = FacesContext.getCurrentInstance();
+		        HttpSession session = (HttpSession) context.getExternalContext().getSession(true);
+		        session.setAttribute("user", usuario);
 				return "loggin";
 			}
 		} catch (Exception e) {

@@ -44,14 +44,14 @@ public class UsuarioDAO {
 		
 		return usuarios;
 	}
-	
-	
+
+
 	public Usuario login(String correo, String contrasena) throws Exception {
-		String jpql = "SELECT u FROM Usuario u WHERE us_correo = ?1 AND us_contrasena = ?2";
+		String jpql = "SELECT u FROM Usuario u WHERE usuario_correo = ?1 AND usuario_contrasena = ?2";
 		Query q = em.createQuery(jpql, Usuario.class);
 		q.setParameter(1, correo );
 		q.setParameter(2, contrasena );
-		
+		System.out.println("Encontrado");
 		Usuario us = (Usuario) q.getSingleResult();
 		
 		if(us==null)
