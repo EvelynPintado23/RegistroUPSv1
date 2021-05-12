@@ -1,6 +1,7 @@
 package modelo;
 
 import java.util.Date;
+import java.util.List;
 
 import javax.persistence.*;
 
@@ -27,37 +28,67 @@ public class Horario {
 	private Date horario_hora_entrada;
 	@Temporal(javax.persistence.TemporalType.TIMESTAMP)
 	private Date horario_hora_salida;
+	
+	private int horario_laboratorio_aforo;
+	
+	@OneToMany(cascade = CascadeType.ALL, mappedBy = "horario")
+	private List<Laboratorio> laboratorios;
+
 	public int getId_horario() {
 		return id_horario;
 	}
+
 	public void setId_horario(int id_horario) {
 		this.id_horario = id_horario;
 	}
+
 	public Date getHorario_dia() {
 		return horario_dia;
 	}
+
 	public void setHorario_dia(Date horario_dia) {
 		this.horario_dia = horario_dia;
 	}
+
 	public Date getHorario_hora_entrada() {
 		return horario_hora_entrada;
 	}
+
 	public void setHorario_hora_entrada(Date horario_hora_entrada) {
 		this.horario_hora_entrada = horario_hora_entrada;
 	}
+
 	public Date getHorario_hora_salida() {
 		return horario_hora_salida;
 	}
+
 	public void setHorario_hora_salida(Date horario_hora_salida) {
 		this.horario_hora_salida = horario_hora_salida;
 	}
-	
-	
+
+	public int getHorario_laboratorio_aforo() {
+		return horario_laboratorio_aforo;
+	}
+
+	public void setHorario_laboratorio_aforo(int horario_laboratorio_aforo) {
+		this.horario_laboratorio_aforo = horario_laboratorio_aforo;
+	}
+
+	public List<Laboratorio> getLaboratorios() {
+		return laboratorios;
+	}
+
+	public void setLaboratorios(List<Laboratorio> laboratorios) {
+		this.laboratorios = laboratorios;
+	}
+
 	@Override
 	public String toString() {
 		return "Horario [id_horario=" + id_horario + ", horario_dia=" + horario_dia + ", horario_hora_entrada="
-				+ horario_hora_entrada + ", horario_hora_salida=" + horario_hora_salida + "]";
+				+ horario_hora_entrada + ", horario_hora_salida=" + horario_hora_salida + ", horario_laboratorio_aforo="
+				+ horario_laboratorio_aforo + ", laboratorios=" + laboratorios + "]";
 	}
+	
 	
 	
 
