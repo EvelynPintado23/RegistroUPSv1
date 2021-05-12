@@ -4,6 +4,7 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.ManyToOne;
 import javax.persistence.TableGenerator;
 
 @Entity
@@ -23,8 +24,18 @@ public class Laboratorio {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private int id_laboratorio;
 	
+	public Horario getHorario() {
+		return horario;
+	}
+	public void setHorario(Horario horario) {
+		this.horario = horario;
+	}
 	private String laboratorio_nombre;
 	private int laboratorio_aforo;
+	
+	@ManyToOne
+    private Horario horario;
+	
 	public int getId_laboratorio() {
 		return id_laboratorio;
 	}
