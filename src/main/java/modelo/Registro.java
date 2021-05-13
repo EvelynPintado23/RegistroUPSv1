@@ -109,21 +109,17 @@ public class Registro {
 		this.laboratorio_id_laboratorio = laboratorio_id_laboratorio;
 	}
 
-
-
-/*
 	@Override
 	public String toString() {
-		return "Registro [id_registro=" + id_registro + ", usuario_id_cedula=" + usuario_id_cedula
-				+ ", laboratorio_id_laboratorio=" + laboratorio_id_laboratorio + ", horario_id_horario="
+		return "Registro [id_registro=" + id_registro + ", laboratorio_id_laboratorio=" + laboratorio_id_laboratorio + ", horario_id_horario="
 				+ horario_id_horario + ", estudiante_id_estudiante=" + estudiante_id_estudiante
 				+ ", bitacora_id_bitacora=" + bitacora_id_bitacora + "]";
-	}*/
 	
 	
 	
 	
 	
+	}
 	
 	
 	
