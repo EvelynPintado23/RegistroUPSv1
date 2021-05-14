@@ -19,7 +19,7 @@ public class GestionUsuarioBean {
 	private Usuario usuario = new Usuario();
 	
 	private String id_cedula;
-	private String usuario_correo;
+	private String usuario_correo ;
 	private String usuario_nombres;
 	private String usuario_apellidos;
 	private String usuario_rol;
@@ -108,6 +108,10 @@ public class GestionUsuarioBean {
 			e.printStackTrace();
 		}
 		return null;
+		
+	}
+	
+	public void cargarUsuario() {
 		
 	}
 	

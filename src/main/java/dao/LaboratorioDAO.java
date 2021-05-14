@@ -34,12 +34,11 @@ public class LaboratorioDAO {
 		return u;
 	}
 	
-	public List<Laboratorio> getUsuarios(){
-		String rol = "pac";
-		String jpql = "SELECT u FROM Laboratorio u WHERE us_rol = ?1";
-		Query q = em.createQuery(jpql, Laboratorio.class);
-		q.setParameter(1, rol);
+	public List<Laboratorio> getLaboratorios(){
 		
+		String jpql = "SELECT l FROM Laboratorio l";
+		Query q = em.createQuery(jpql, Laboratorio.class);
+				
 		List<Laboratorio> laboratorio = q.getResultList();
 		
 		return laboratorio;

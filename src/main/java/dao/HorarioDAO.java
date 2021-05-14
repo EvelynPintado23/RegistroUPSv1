@@ -34,7 +34,7 @@ public class HorarioDAO {
 		return u;
 	}
 	
-	public List<Horario> getUsuarios(){
+	/*public List<Horario> getHorarios(){
 		String rol = "pac";
 		String jpql = "SELECT u FROM Horario u WHERE us_rol = ?1";
 		Query q = em.createQuery(jpql, Horario.class);
@@ -43,6 +43,6 @@ public class HorarioDAO {
 		List<Horario> horario = q.getResultList();
 		
 		return horario;
-	}
+	}*/
 	
 }

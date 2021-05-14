@@ -34,7 +34,7 @@ public class EstudianteDAO{
 		return u;
 	}
 	
-	public List<Estudiante> getUsuarios(){
+	/*public List<Estudiante> getEstudiantes(){
 		String rol = "pac";
 		String jpql = "SELECT u FROM Estudiante u WHERE us_rol = ?1";
 		Query q = em.createQuery(jpql, Estudiante.class);
@@ -43,6 +43,6 @@ public class EstudianteDAO{
 		List<Estudiante> estudiante = q.getResultList();
 		
 		return estudiante;
-	}
+	}*/
 
 }
