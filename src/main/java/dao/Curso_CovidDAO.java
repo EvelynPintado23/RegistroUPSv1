@@ -34,7 +34,7 @@ public class Curso_CovidDAO {
 		return u;
 	}
 	
-	public List<Curso_Covid> getUsuarios(){
+	/*public List<Curso_Covid> getCursos_Covid(){
 		String rol = "pac";
 		String jpql = "SELECT u FROM Curso_Covid u WHERE us_rol = ?1";
 		Query q = em.createQuery(jpql, Curso_Covid.class);
@@ -43,6 +43,6 @@ public class Curso_CovidDAO {
 		List<Curso_Covid> curso_covid = q.getResultList();
 		
 		return curso_covid;
-	}
+	}*/
 	
 }

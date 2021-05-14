@@ -34,7 +34,7 @@ public class BitacoraDao {
 		return u;
 	}
 	
-	public List<Bitacora> getUsuarios(){
+	/*public List<Bitacora> getBitacoras(){
 		String rol = "pac";
 		String jpql = "SELECT u FROM Bitacora u WHERE us_rol = ?1";
 		Query q = em.createQuery(jpql, Bitacora.class);
@@ -43,6 +43,6 @@ public class BitacoraDao {
 		List<Bitacora> bitacora = q.getResultList();
 		
 		return bitacora;
-	}
+	}*/
 
 }
