@@ -159,6 +159,7 @@ public class GestionRegistroBean {
 	public List<Registro> recuperarRegistros(){
 		registros = gestion_registro_local.recuperarRegistros();
 		System.out.println("ksvjdkjasdv");
+		System.out.println("Holi");
 		return registros;	
 	}
 	
