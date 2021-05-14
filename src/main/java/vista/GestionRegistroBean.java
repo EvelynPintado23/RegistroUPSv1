@@ -31,6 +31,7 @@ public class GestionRegistroBean {
 	private Estudiante estudiante_id_estudiante;
 	private Bitacora bitacora_id_bitacora;
 	private Registro registro;
+	private Usuario usuario;
 	private List<Registro> registros;
 	
 	
@@ -42,6 +43,8 @@ public class GestionRegistroBean {
 	private String usuario_contrasena;
 	private boolean usuario_acceso;
 	private List<Usuario> usuarios;
+	
+	
 	public GestionRegistroLocal getGestion_registro_local() {
 		return gestion_registro_local;
 	}
@@ -138,16 +141,27 @@ public class GestionRegistroBean {
 	public void setUsuarios(List<Usuario> usuarios) {
 		this.usuarios = usuarios;
 	}
-	
+
+	public Usuario getUsuario() {
+		return usuario;
+	}
+	public void setUsuario(Usuario usuario) {
+		this.usuario = usuario;
+	}
 	public Registro getRegistro() {
 		return registro;
 	}
 	public void setRegistro(Registro registro) {
 		this.registro = registro;
 	}
-	/*public List<Registro> recuperarRegistros(){
-		registros=gestion_registro_local.get
+	
+	public List<Registro> recuperarRegistros(){
+		registros = gestion_registro_local.recuperarRegistros();
 		return registros;	
 	}
-	*/
+	
+	public String editarRegistro(int id) {
+		return "";
+	}
+	
 }

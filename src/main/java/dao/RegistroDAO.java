@@ -34,11 +34,11 @@ public class RegistroDAO {
 		return u;
 	}
 	
-	public List<Registro> getUsuarios(){
-		String rol = "pac";
-		String jpql = "SELECT u FROM Registro u WHERE us_rol = ?1";
+	public List<Registro> getRegistros(){
+		
+		String jpql = "SELECT u FROM Registro u ";
 		Query q = em.createQuery(jpql, Registro.class);
-		q.setParameter(1, rol);
+		
 		
 		List<Registro> registro = q.getResultList();
 		
