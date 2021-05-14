@@ -50,6 +50,7 @@ public class GestionRegistroBean {
 	}
 	public void setGestion_registro_local(GestionRegistroLocal gestion_registro_local) {
 		this.gestion_registro_local = gestion_registro_local;
+		
 	}
 	public GestionUsuarioLocal getGestion_usuario_local() {
 		return gestion_usuario_local;
@@ -157,11 +158,15 @@ public class GestionRegistroBean {
 	
 	public List<Registro> recuperarRegistros(){
 		registros = gestion_registro_local.recuperarRegistros();
+		System.out.println("ksvjdkjasdv");
 		return registros;	
 	}
 	
 	public String editarRegistro(int id) {
 		return "";
+		
 	}
+	
+
 	
 }
